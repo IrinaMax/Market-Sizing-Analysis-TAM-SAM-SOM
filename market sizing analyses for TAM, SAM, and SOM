@@ -1,3 +1,5 @@
+# I generated synthetic data where SAM and SOM are distinctly visible compared to TAM. 
+# I'll scale down SAM and SOM relative to TAM for better visualization. Then, wI'll create separate plots for TAM, SAM, and SOM. 
 
 # Load required libraries
 library(ggplot2)
