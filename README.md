@@ -1,4 +1,4 @@
-# Market-Sizing-Analysis-TAM-SAM-SOM
+# Market Sizing Analysis: TAM, SAM, SOM
 Market Analysis with example in R and python
 
 Market sizing analyses, including Total Addressable Market (TAM), Serviceable Addressable Market (SAM), and Share of Market (SOM), are essential for understanding the potential of a product or service in a given market. Here's a refined approach to conducting these analyses:
@@ -23,3 +23,5 @@ Determine your market share: Estimate your current or projected market share wit
 Monitor and adjust: Continuously monitor changes in the market landscape, including shifts in customer preferences, competitor actions, and external factors. Adjust your strategies accordingly to maintain or increase your SOM over time.
 
 Remember that market sizing analyses are not static and may require periodic updates as market conditions evolve. Additionally, it's essential to consider the limitations and uncertainties associated with these analyses and incorporate them into your decision-making process.
+
+![Rplot tam sam som](https://github.com/IrinaMax/Market-Sizing-Analysis-TAM-SAM-SOM/assets/16123495/3bd77ad6-b686-4761-ac17-889e18ae2994)
