@@ -1,0 +1,35 @@
+
+# Load required libraries
+library(ggplot2)
+
+# Generate synthetic data
+set.seed(123) # Set seed for reproducibility
+total_population <- 1000000 # Total population in the target geography
+target_segment_population <- 250000 # Population within the target segment
+average_revenue_per_customer <- 1000 # Average revenue per customer
+your_market_share <- 0.1 # Your current or projected market share within the SAM
+
+# Calculate TAM, SAM, and SOM
+TAM <- total_population * average_revenue_per_customer
+SAM <- target_segment_population * average_revenue_per_customer * 0.75 # Adjust SAM relative to TAM
+SOM <- SAM * your_market_share * 0.8 # Adjust SOM relative to SAM
+
+# Create data frames for TAM, SAM, and SOM
+tam_data <- data.frame(Market = "TAM", Value = TAM)
+sam_data <- data.frame(Market = "SAM", Value = SAM)
+som_data <- data.frame(Market = "SOM", Value = SOM)
+
+# Combine data frames
+market_data <- rbind(tam_data, sam_data, som_data)
+
+# Format value for better visualization
+market_data$Formatted_Value <- format(market_data$Value, big.mark = ",", scientific = FALSE)
+
+# Plot bar plots for TAM, SAM, and SOM
+ggplot(market_data, aes(x = Market, y = Value, fill = Market)) +
+  geom_bar(stat = "identity") +
+  geom_text(aes(label = Formatted_Value), vjust = -0.3, size = 5, color = "black") +
+  labs(title = "Market Sizing Analysis", y = "Value", x = "Market") +
+  scale_y_continuous(labels = scales::comma) + # Add comma separator to y-axis
+  theme_minimal() +
+  theme(legend.position = "none") # Remove legend
